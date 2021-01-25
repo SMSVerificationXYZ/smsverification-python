@@ -93,6 +93,12 @@ class SMSVerification:
         return json.loads(res.data.decode('utf-8'))
 
 
+# example
 api = SMSVerification('demo', 'demo')
-print(api.get_user_balance()["data"]["balance"])
-print(api.get_disposable_price("Russia", "ProtonMail")["data"]["phone"]["price"])
+
+balance = api.get_user_balance()["data"]["balance"]  # getting the user balance (float)
+phone_price = api.get_disposable_price("Russia", "ProtonMail")["data"]["phone"][
+    "price"]  # getting the phone price (float)
+
+print(balance)
+print(phone_price)
