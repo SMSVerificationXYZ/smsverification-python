@@ -67,7 +67,7 @@ class SMSVerification:
 
 
 # example
-api = SMSVerification('demo', 'demo')
+api = SMSVerification('Token')
 
 balance = api.get_user_balance()["data"]["balance"]  # getting the user balance (float)
 phone_price = api.get_disposable_price("Russia", "ProtonMail")["data"]["phone"][
